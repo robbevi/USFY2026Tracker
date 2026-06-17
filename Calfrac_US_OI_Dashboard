@@ -16,7 +16,7 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#eef1f5;
 .wrap{max-width:1400px;margin:22px auto;padding:0 18px}
 
 .cards{display:grid;grid-template-columns:repeat(6,1fr);gap:13px;margin-bottom:24px}
-.card{background:#fff;border-radius:10px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.07);border-top:4px solid #006F53;transition:transform .12s}
+.card{background:#fff;border-radius:10px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.07);border-top:4px solid #006F53;transition:transform .12s;text-align:center}
 .card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .card .lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;color:#888;font-weight:600}
 .card .val{font-size:22px;font-weight:700;margin-top:5px;color:#006F53}
@@ -28,13 +28,13 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#eef1f5;
 .snapshot table{width:100%;border-collapse:collapse}
 .snapshot thead th{padding:8px 10px;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;text-align:right;border-bottom:1px solid #ddd;background:#fafafa;color:#555}
 .snapshot thead th:first-child{text-align:left}
-.snapshot .col-group{background:#f0f2f5;color:#006F53;font-weight:700;font-size:11px;text-align:center;padding:8px;border-bottom:2px solid #006F53}
-.snapshot tbody td{padding:9px 10px;font-size:12.5px;text-align:right;border-bottom:1px solid #f0f0f0;color:#444}
+.snapshot .col-group{background:#f0f2f5;color:#006F53;font-weight:700;font-size:14px;text-align:center;padding:12px 8px;border-bottom:2px solid #006F53;letter-spacing:.4px;text-transform:uppercase}
+.snapshot tbody td{padding:11px 10px;font-size:12.5px;text-align:right;border-bottom:1px solid #f0f0f0;color:#444}
 .snapshot tbody td:first-child{text-align:left;font-weight:600;color:#006F53;font-size:13px}
 .snapshot tbody tr:hover{background:#f7f9fc}
 .snapshot tbody tr.total td{font-weight:700;background:#f4f6fa;color:#006F53;border-top:2px solid #006F53}
-.progress-bar-bg{background:#e8e8e8;border-radius:10px;height:18px;width:100%;overflow:hidden;display:inline-block;vertical-align:middle;min-width:70px}
-.progress-bar-fill{height:100%;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:#fff;min-width:28px}
+.progress-bar-bg{background:#e8e8e8;border-radius:13px;height:26px;width:100%;overflow:hidden;display:inline-block;vertical-align:middle;min-width:100px}
+.progress-bar-fill{height:100%;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;min-width:42px}
 .progress-bar-fill.on-track{background:#27ae60}
 .progress-bar-fill.behind{background:#e74c3c}
 
@@ -45,10 +45,10 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#eef1f5;
 .dist-card{background:#fff;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,.08);margin-bottom:20px;overflow:hidden;border:1px solid #e0e4ea}
 .dist-card-hdr{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#f8faf8;border-bottom:1px solid #e0e4ea}
 .dist-card-hdr .dist-name{font-size:20px;font-weight:700;color:#006F53;letter-spacing:.3px}
-.badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:800;letter-spacing:.5px}
-.badge-ok{background:#e6f7ed;color:#1a8a3f;border:2px solid #1a8a3f}
-.badge-warn{background:#fce4e4;color:#c0392b;border:2px solid #c0392b;animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.badge{display:inline-block;padding:10px 28px;border-radius:25px;font-size:17px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.badge-ok{background:linear-gradient(135deg,#e6f7ed 0%,#c9eed7 100%);color:#0f6b2e;border:3px solid #1a8a3f;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+.badge-warn{background:linear-gradient(135deg,#fce4e4 0%,#f8c2c2 100%);color:#a02818;border:3px solid #c0392b;text-shadow:0 1px 0 rgba(255,255,255,.6);animation:pulse 1.3s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.04)}}
 
 .dist-card-body{display:flex;padding:28px 24px;gap:28px;align-items:stretch;min-height:200px}
 .ytd-box{min-width:220px;max-width:240px;background:#f4f8f5;border-radius:10px;padding:20px;border:1px solid #d6e6da;display:flex;flex-direction:column;justify-content:center;gap:14px}
@@ -58,10 +58,13 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#eef1f5;
 .ytd-item.variance{border-top:2px solid #d6e6da;padding-top:12px}
 
 .bars-area{flex:1;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.month-group{flex:1;min-width:110px}
+.month-group{flex:1;min-width:130px}
 .month-group .mlbl{font-size:13px;color:#888;text-align:center;margin-bottom:8px;font-weight:700;text-transform:uppercase}
 .bar-pair{display:flex;flex-direction:column;gap:6px}
 .bar-wrap{display:flex;align-items:center;gap:6px}
+.bar-tag{font-size:9.5px;font-weight:800;letter-spacing:.6px;min-width:44px;text-align:right;text-transform:uppercase}
+.bar-tag.budget{color:#5a6c7d}
+.bar-tag.actual{color:#1B5E20}
 .bar{height:32px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:12px;font-weight:600;color:#fff;white-space:nowrap;min-width:3px;transition:width .4s}
 .bar-bgt{background:#b0bec5}.bar-good{background:#27ae60}.bar-bad{background:#e74c3c}
 .bar-val{font-size:13px;color:#555;white-space:nowrap;font-weight:600}
@@ -152,6 +155,7 @@ table.pnl tbody tr:hover{background:#f7f9fc}
 
 </div>
 <script>
+
 let uploadedFiles={actuals:null,budget:null};
 let DATA=null;
 
@@ -321,7 +325,6 @@ function renderDashboard(){
     <div class="card"><div class="lbl">FY-2026 Calendar</div><div class="val">${daysRemaining} Days Left</div><div class="sm">${pctThrough}% through FY 2026</div></div>
   </div>`;
 
-  // Snapshot Table
   const aRev=D.actLines["Revenue"]||[],aGM=D.actLines["Gross Margin"]||[];
   const bRev=D.bgtLines["Revenue"]||[],bGM=D.bgtLines["Gross Margin"]||[];
   const opDist=D.districts.filter(d=>d.bgtGM!=null);
@@ -365,7 +368,6 @@ function renderDashboard(){
   </tr>`;
   H+=`</tbody></table></div>`;
 
-  // District Cards
   H+=`<div class="viz-section-hd">Budget vs Actual: Monthly Gross Margin by District
     <div class="legend"><span><span class="dot" style="background:#b0bec5"></span>Budget</span><span><span class="dot" style="background:#27ae60"></span>Actual \u2265 Budget</span><span><span class="dot" style="background:#e74c3c"></span>Actual &lt; Budget</span></div>
   </div>`;
@@ -376,7 +378,7 @@ function renderDashboard(){
     const ytdVar=ytdAG-ytdBG;
     const ahead=ytdAG>=ytdBG;
     const badgeCls=ahead?"badge-ok":"badge-warn";
-    const badgeTxt=ahead?"\u2705 ON TRACK":"\u26a0\ufe0f BEHIND";
+    const badgeTxt=ahead?"\u2705 On Track!":"\u26a0\ufe0f Behind!";
 
     let allV=[];for(let i=0;i<n;i++){allV.push(Math.abs(d.bgtGM[i]||0),Math.abs((d.actGM||[])[i]||0));}
     const mx=Math.max(...allV,1);
@@ -399,15 +401,15 @@ function renderDashboard(){
       const mv=av-bv;
       const bw=Math.max(Math.abs(bv)/mx*100,1),aw=Math.max(Math.abs(av)/mx*100,1);
       const varCls=mv>0?"var-pos":mv<0?"var-neg":"var-zero";
+      const showTag=(i===0);
       H+=`<div class="month-group"><div class="mlbl">${D.months[i]}</div><div class="bar-pair">
-        <div class="bar-wrap"><div class="bar bar-bgt" style="width:${bw}%"></div><span class="bar-val">${fmt(bv)}</span></div>
-        <div class="bar-wrap"><div class="bar ${av>=bv?'bar-good':'bar-bad'}" style="width:${aw}%"></div><span class="bar-val">${fmt(av)}</span></div>
+        <div class="bar-wrap">${showTag?'<span class="bar-tag budget">Budget</span>':''}<div class="bar bar-bgt" style="width:${bw}%"></div><span class="bar-val">${fmt(bv)}</span></div>
+        <div class="bar-wrap">${showTag?'<span class="bar-tag actual">Actual</span>':''}<div class="bar ${av>=bv?'bar-good':'bar-bad'}" style="width:${aw}%"></div><span class="bar-val">${fmt(av)}</span></div>
       </div><div class="var-pill"><span class="${varCls}">${fmtVar(mv)}</span></div></div>`;
     }
     H+=`</div></div></div>`;
   });
 
-  // P&L
   let opts="";
   D.months.forEach((m,i)=>{opts+=`<option value="${i}" ${i===ci?'selected':''}>${m}-2026</option>`;});
   opts+=`<option value="ytd">YTD (${D.months[0]} \u2013 ${curMonth})</option>`;
@@ -444,7 +446,7 @@ function renderPnL(){
 }
 
 window.addEventListener("DOMContentLoaded",loadCurrentData);
-</script>
 
+</script>
 </body>
 </html>
